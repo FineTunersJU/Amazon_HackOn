@@ -1,6 +1,9 @@
 # **Amazon_HackOn**
 
+The models because of their size cannot be uploaded here so they have been uploaded to Google Driven,links to what have been given below
+
 # Objective
+
 Increasing customer retention and trust with the Amazon brand by identifying and removing counterfeit products off the shelf and introducing short term renting of goods.
 
 # Applications
