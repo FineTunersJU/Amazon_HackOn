@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles/style.css">
+    
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>Rentify</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="static/assets/landing_img.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/assets/landing_2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="static/assets/landing_3.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <div class="container">
+        <div class="row" id="fisrt_row">
+            <div class="col-md-4">
+                <a href="./Pages/product_page.html">
+                  <div class="card">
+                    <div class="card-body">
+                        <img src="https://rukminim1.flixcart.com/image/416/416/l5h2xe80/mobile/5/x/r/-original-imagg4xza5rehdqv.jpeg?q=70" class="d-block w-100" alt="">
+                        <h5 class="card-title">Nothing Phone (1)</h5>
+                        <p class="card-text">The Nothing Phone (1) boasts an elegant style that comes to life with beautiful symbols to enable an enriched connection between you and your device.</p>
+                        <a href="{{url_for('hello_world')}}" class="btn btn-primary">Buy Now</a>
+                        <a href="{{url_for('hello_world')}}" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://rukminim1.flixcart.com/image/416/416/l3vxbbk0/computer/g/u/y/-original-imagewgtfgzf8fdd.jpeg?q=70" class="d-block w-100" id="laptop" alt="...">
+                        <h5 class="card-title">ASUS Vivobook Pro</h5>
+                        <p class="card-text">14 Inch 2.8k OLED (600nits peak brightness, 100% DCI-P3 color gamut)
+                            Light Laptop without Optical Disk Drive
+                            Pre-installed Genuine Windows 10 OS
+                            </p>
+                        <p>
+                            (8 GB/1 TB SSD/Windows 10 Home/4 GB Graphics/NVIDIA GeForce RTX 3050/90 Hz) M7400QE-KM046TS Gaming Laptop 
+                        </p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://rukminim1.flixcart.com/image/416/416/l3vxbbk0/headphone/b/v/u/-original-imagewuzqrqktf6m.jpeg?q=50" class="d-block w-100" alt="...">
+                        <h5 class="card-title">boAt Rockerz 510</h5>
+                        <p class="card-text">The 50 mm drivers of this headset from boAt ensure that you can enjoy true-to-life</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://rukminim1.flixcart.com/image/416/416/kpr8k280/smartwatch/y/l/g/bsw004-android-ios-fire-boltt-original-imag3wwa4uk2kwva.jpeg?q=70" class="d-block w-100" alt="...">
+                        <h5 class="card-title">Fire-Boltt Smartwatch</h5>
+                        <p class="card-text">The Fire-Boltt BSW004 smartwatch tracks your activities, relays your phone notifications, and also helps you monitor your health. </p>
+                        <a href="{{url_for('product2')}}" class="btn btn-primary">Buy Now</a>
+                        <a href="{{url_for('product2')}}" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://rukminim1.flixcart.com/image/416/416/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" class="d-block w-100" id="laptop" alt="...">
+                        <h5 class="card-title">Apple macbook Pro</h5>
+                        <p class="card-text">8 GB/512 GB SSD/Mac OS Big Sur MacBook Air, 30 W USB-C Power Adapter, USB-C Charge Cable (2m), User Guide, Warranty Documents
+                            Model Number
+                            Z12400092
+                            Part Number
+                            Z12400092
+                            Series
+                            MacBook Air
+                            Color
+                            Space Grey 
+                            Thin and Light Laptop
+                            Suitable For
+                            Processing & Multitasking
+                            Battery Backup
+                            Upto 15 Hours
+                            Power Supply
+                            30 W AC Adapter
+                            MS Office Provided
+                            Apple
+                            Processor Name
+                            M1
+                            SSD
+                            Yes
+                            SSD Capacity
+                            512 GB
+                            RAM
+                            8 GB RAM
+                            </p>
+                        
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="https://rukminim1.flixcart.com/image/416/416/jfbfde80/camera/n/r/n/canon-eos-eos-3000d-dslr-original-imaf3t5h9yuyc5zu.jpeg?q=70" class="d-block w-100" alt="...">
+                        <h5 class="card-title">Canon EOS 3000D DSLR Camera</h5>
+                        <p class="card-text">Self-Timer | Type C and Mini HDMI, |9 Auto Focus Points | 35x Optical Zoom., Effective Pixels: 18 MP APS-C CMOS sensor-which is 25 times larger than a typical Smartphone sensor., WiFi | Full HD | Video Recording at 1080 p on 30fps.
+                            Effective Pixels: 18 MP
+                            Sensor Type: CMOS WiFi Available
+                            Full HD Memory Card is not included in this package.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                        <a href="#" class="btn btn-primary">Rent Now</a>
+                    </div>
+                </div>
+        </div>
+        <footer>
+            <p>Rentify Karo Befikar<br>
+            All Copyrights are Reserved for 2022</p>
+          </footer>
+</body>
+</html>
