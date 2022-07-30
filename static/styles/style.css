@@ -1,0 +1,65 @@
+#nav-item{
+    color: black;
+    font-weight: bold;
+}
+
+.row {
+    margin: 50px;
+}
+p {
+    margin: 9px;
+    text-decoration: none;
+}
+h5 {
+    margin: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#laptop{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+#first_row{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#second_row{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.card-body{
+    margin: 5px;
+}
+.card {
+    margin: 5px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-primary{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
