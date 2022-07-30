@@ -26,5 +26,10 @@ def predict(query, model, tokenizer, device="cpu"):
     fake, real = probs.detach().cpu().flatten().numpy().tolist()
     return real
 
+def predict_review(query):
+    if(sentiment_predict(query)[0]['label']=='POSITIVE'):
+        return predict(query, model, tokenizer)
+    else:
+        return 0
 # print(type(predict("I love this product", model, tokenizer)))
 # print(sentiment_predict("I hate this product")[0]['label'])
