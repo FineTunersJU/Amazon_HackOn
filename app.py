@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from model import predict, sentiment_predict,model,tokenizer
+from model import predict_review, model,tokenizer
 
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -29,7 +29,7 @@ def hello_world():
     if request.method=='POST':
         title = request.form['title']
         desc = request.form['desc']
-        tag = predict(desc,model,tokenizer)
+        tag = predict_review(desc)
         todo = Todo(title=title, desc=desc,tag=tag)
         db.session.add(todo)
         db.session.commit()
@@ -42,7 +42,7 @@ def product2():
     if request.method=='POST':
         title = request.form['title']
         desc = request.form['desc']
-        tag = predict(desc,model,tokenizer)
+        tag = predict_review(desc)
         todo = Todo(title=title, desc=desc,tag=tag)
         db.session.add(todo)
         db.session.commit()
