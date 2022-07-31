@@ -1,6 +1,10 @@
-# **Amazon_HackOn**
+# **Amazon_HackOn 2022**
 
-The models because of their size cannot be uploaded here so they have been uploaded to Google Driven,links to what have been given below
+##Customer trust
+
+One of the key elements to increase customer stickiness and trust with the Amazon brand is delivering the right product to the right customer at the right time. This involves identifying and removing counterfeit products off the shelf,
+
+P.S. - The models because of their size cannot be uploaded here so they have been uploaded to Google Driven,links to what have been given below
 
 # Objective
 
