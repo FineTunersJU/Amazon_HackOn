@@ -65,6 +65,9 @@ def get_detected_image(tensor,model):
     preds[0]['boxes'] = preds[0]['boxes'][maxa].unsqueeze(0)
     xmin,ymin,xmax,ymax = preds[0]['boxes'][0][0],preds[0]['boxes'][0][1],preds[0]['boxes'][0][2],preds[0]['boxes'][0][3]
     xmin,ymin,xmax,ymax = int(xmin),int(ymin),int(xmax),int(ymax)
+    d=35
+    xmin,ymin,xmax,ymax = xmin-d,ymin-d,xmax+d,ymax+d
+    xmin,ymin,xmax,ymax = max(0,xmin),max(0,ymin),min(xmax,tensor.shape[2]),min(ymax,tensor.shape[3])
     tensor = tensor[:,:,xmin:xmax,ymin:ymax]
     tensor = transforms.Resize((256,256))(tensor)
     return tensor
@@ -75,11 +78,15 @@ def predict_image(pil_img,model):
     img = transforms.Resize((256,256))(img)
     img = img.unsqueeze(0)
     img = get_detected_image(img,detector)
+    im1=transforms.ToPILImage()(img.squeeze(0))
+    
     pred_ind = model(img)
+    im1.save("static/detected_images/detected_"+number_dict[pred_ind]+".jpg")
     return number_dict[pred_ind]
 
-if __name__ == '__main__':
-    img = Image.open("google.png").convert("RGB")
-    print(predict_image(img,Classify))
+def real_classifier(PATH):
+    img = Image.open(PATH).convert("RGB")
+    return predict_image(img,Classify)
+    # print()
 
-
+# print(real_classifier("static/images/nike.jfif"))
