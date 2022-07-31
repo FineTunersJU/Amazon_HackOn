@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request
 from model import predict_review, model,tokenizer
-
+from model_image import real_classifier
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
+from sift_logo_classification import predict_output
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///todo.db"
@@ -35,7 +37,12 @@ def hello_world():
         db.session.commit()
         
     allTodo = Todo.query.all() 
-    return render_template('Pages/nothing.html', allTodo=allTodo)
+    
+    image_tag=real_classifier(r'static/images/adidas.jpeg')
+    print('static/images/detected_'+image_tag+'.jpg')
+    image_verify=predict_output(image_tag,'static/detected_images/detected_'+image_tag+'.jpg')
+    
+    return render_template('Pages/Adidas.html', allTodo=allTodo,image_tag=image_verify)
 
 @app.route('/products2', methods=['GET', 'POST'])
 def product2():
@@ -48,7 +55,43 @@ def product2():
         db.session.commit()
         
     allTodo = Todo.query.all() 
-    return render_template('Pages/Fire-Boltt.html', allTodo=allTodo)
+    image_tag=real_classifier('static/images/abibas.jpg')
+    image_verify=predict_output(image_tag,'static/detected_images/detected_'+image_tag+'.jpg')
+    return render_template('Pages/AdidasTShirt.html', allTodo=allTodo,image_verify=image_verify)
+
+
+@app.route('/products3', methods=['GET', 'POST'])
+def product3():
+    if request.method=='POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        tag = predict_review(desc)
+        todo = Todo(title=title, desc=desc,tag=tag)
+        db.session.add(todo)
+        db.session.commit()
+        
+    allTodo = Todo.query.all() 
+    image_tag=real_classifier('static/images/nike.jfif')
+    image_verify=predict_output(image_tag,'static/detected_images/detected_'+image_tag+'.jpg')
+    
+    return render_template('Pages/Nike_shoes.html', allTodo=allTodo,image_tag=image_verify)
+
+@app.route('/products4', methods=['GET', 'POST'])
+def product4():
+    if request.method=='POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        tag = predict_review(desc)
+        todo = Todo(title=title, desc=desc,tag=tag)
+        db.session.add(todo)
+        db.session.commit()
+        
+    allTodo = Todo.query.all() 
+    image_tag=real_classifier('static/images/nipe.jpeg')
+    print('static/detected_images/detected_'+image_tag+'.jpg')
+    image_verify=predict_output(image_tag,'static/detected_images/detected_'+image_tag+'.jpg')
+    print(image_verify)
+    return render_template('Pages/Nike.html', allTodo=allTodo,image_tag=image_verify)
 
 @app.route('/show')
 def products():
