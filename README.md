@@ -1,6 +1,6 @@
 # **Amazon_HackOn 2022**
 
-##Customer trust
+## Customer trust
 
 One of the key elements to increase customer stickiness and trust with the Amazon brand is delivering the right product to the right customer at the right time. This involves identifying and removing counterfeit products off the shelf,
 
