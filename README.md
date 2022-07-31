@@ -2,7 +2,7 @@
 
 ## Customer trust
 
-One of the key elements to increase customer stickiness and trust with the Amazon brand is delivering the right product to the right customer at the right time. This involves identifying and removing counterfeit products off the shelf,
+One of the key elements to increase customer stickiness and trust with the Amazon brand is delivering the right product to the right customer at the right time. This involves identifying and removing counterfeit products off the shelf. We tried to tackle this problem precisely and introduce a new product renting feature to increase customer retentivity.
 
 P.S. - The models because of their size cannot be uploaded here so they have been uploaded to Google Driven,links to what have been given below
 
@@ -26,12 +26,13 @@ Finally, we can host these models on AWS and then use a Flutter based webapp/app
 
 # Techstack
 
-* HTML,CSS,Bootstrap
+* HTML,CSS
 * AWS
 * Pytorch
 * SQL database
+* Flask
 
 # What comes after...
 
-After the event is over, we can commercialize this idea and turn this into a full fledged app. We also aim to generalize the counterfeit product removal model so that it can detect any counterfeit product for other sites as well. We will also work on expanding our sphere by adding feedback on the goods collected from other social media platforms. We will extend these features for renting and reselling of used goods as well.
+After the event is over, we can utilize this idea and turn this into a full fledged app. We also aim to generalize the counterfeit product removal model so that it can detect any counterfeit product for other sites as well. We will also work on expanding our sphere by adding feedback on the goods collected from other social media platforms. We will extend these features for renting and reselling of used goods as well.
 
